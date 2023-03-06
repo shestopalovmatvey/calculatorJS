@@ -13,6 +13,19 @@ let oper = {
     isDiv: false,
 }
 
+let roundingNum = (num) => {
+    let arr = num;
+    let count = 0;
+    for (let i = arr.length - 1; i > 0; i--) {
+        if (arr[i] === '0' || arr[i] === '.') {
+            count++;
+        } else {
+            break;
+        }
+    }
+    return arr.slice(0, arr.length - count)
+}
+
 let setNewValue = () => {
     prevSum = currentSum;
     currentStr = '';
@@ -43,7 +56,7 @@ let kindOfOperation = (oper, currentSum, prevSum) => {
         case 'isMul':
             return +currentSum * +prevSum;
         case 'isDiv':
-            return (+prevSum / +currentSum).toFixed(4)
+            return roundingNum((+prevSum / +currentSum).toFixed(4))
     }
 }
 

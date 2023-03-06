@@ -31,9 +31,9 @@ body {
 .inputNum {
     display: flex;
     justify-content: flex-end;
-    padding: 22px;
+    padding: 18px;
     color: white;
-    font-size: 35px;
+    font-size: 50px;
     overflow: auto;
 }
 
@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5% 0;
+    margin: 4% 0;
 }
 
 .calc__button {
@@ -50,14 +50,21 @@ body {
     font-size: 26px;
     font-family: inherit;
     font-weight: bold;
-    padding: 20px 30px;
+    text-align: center;
+    padding: 20px 25px;
     border-radius: 17px;
     flex-basis: 20%;
-    height: 65px;
+    height: 70px;
 }
 
 .reset {
     flex-basis: 47%;
+}
+
+.row {
+    flex-basis: 19%;
+    padding: 15px 20px;
+    border: 0;
 }
 
 .calc__button:last-child {
